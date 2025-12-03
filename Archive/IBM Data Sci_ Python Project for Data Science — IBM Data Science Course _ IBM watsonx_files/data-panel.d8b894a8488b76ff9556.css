@@ -1,0 +1,1346 @@
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2022. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+:root {
+  --cds-caption-01-font-size: 0.75rem;
+  --cds-caption-01-font-weight: 400;
+  --cds-caption-01-line-height: 1.33333;
+  --cds-caption-01-letter-spacing: 0.32px;
+  --cds-caption-02-font-size: 0.875rem;
+  --cds-caption-02-font-weight: 400;
+  --cds-caption-02-line-height: 1.28572;
+  --cds-caption-02-letter-spacing: 0.32px;
+  --cds-label-01-font-size: 0.75rem;
+  --cds-label-01-font-weight: 400;
+  --cds-label-01-line-height: 1.33333;
+  --cds-label-01-letter-spacing: 0.32px;
+  --cds-label-02-font-size: 0.875rem;
+  --cds-label-02-font-weight: 400;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
+  --cds-helper-text-01-font-size: 0.75rem;
+  --cds-helper-text-01-line-height: 1.33333;
+  --cds-helper-text-01-letter-spacing: 0.32px;
+  --cds-helper-text-02-font-size: 0.875rem;
+  --cds-helper-text-02-font-weight: 400;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
+  --cds-body-short-01-font-size: 0.875rem;
+  --cds-body-short-01-font-weight: 400;
+  --cds-body-short-01-line-height: 1.28572;
+  --cds-body-short-01-letter-spacing: 0.16px;
+  --cds-body-short-02-font-size: 1rem;
+  --cds-body-short-02-font-weight: 400;
+  --cds-body-short-02-line-height: 1.375;
+  --cds-body-short-02-letter-spacing: 0;
+  --cds-body-long-01-font-size: 0.875rem;
+  --cds-body-long-01-font-weight: 400;
+  --cds-body-long-01-line-height: 1.42857;
+  --cds-body-long-01-letter-spacing: 0.16px;
+  --cds-body-long-02-font-size: 1rem;
+  --cds-body-long-02-font-weight: 400;
+  --cds-body-long-02-line-height: 1.5;
+  --cds-body-long-02-letter-spacing: 0;
+  --cds-code-01-font-family: 'IBM Plex Mono', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', monospace;
+  --cds-code-01-font-size: 0.75rem;
+  --cds-code-01-font-weight: 400;
+  --cds-code-01-line-height: 1.33333;
+  --cds-code-01-letter-spacing: 0.32px;
+  --cds-code-02-font-family: 'IBM Plex Mono', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', monospace;
+  --cds-code-02-font-size: 0.875rem;
+  --cds-code-02-font-weight: 400;
+  --cds-code-02-line-height: 1.42857;
+  --cds-code-02-letter-spacing: 0.32px;
+  --cds-heading-01-font-size: 0.875rem;
+  --cds-heading-01-font-weight: 600;
+  --cds-heading-01-line-height: 1.42857;
+  --cds-heading-01-letter-spacing: 0.16px;
+  --cds-heading-02-font-size: 1rem;
+  --cds-heading-02-font-weight: 600;
+  --cds-heading-02-line-height: 1.5;
+  --cds-heading-02-letter-spacing: 0;
+  --cds-productive-heading-01-font-size: 0.875rem;
+  --cds-productive-heading-01-font-weight: 600;
+  --cds-productive-heading-01-line-height: 1.28572;
+  --cds-productive-heading-01-letter-spacing: 0.16px;
+  --cds-productive-heading-02-font-size: 1rem;
+  --cds-productive-heading-02-font-weight: 600;
+  --cds-productive-heading-02-line-height: 1.375;
+  --cds-productive-heading-02-letter-spacing: 0;
+  --cds-productive-heading-03-font-size: 1.25rem;
+  --cds-productive-heading-03-font-weight: 400;
+  --cds-productive-heading-03-line-height: 1.4;
+  --cds-productive-heading-03-letter-spacing: 0;
+  --cds-productive-heading-04-font-size: 1.75rem;
+  --cds-productive-heading-04-font-weight: 400;
+  --cds-productive-heading-04-line-height: 1.28572;
+  --cds-productive-heading-04-letter-spacing: 0;
+  --cds-productive-heading-05-font-size: 2rem;
+  --cds-productive-heading-05-font-weight: 400;
+  --cds-productive-heading-05-line-height: 1.25;
+  --cds-productive-heading-05-letter-spacing: 0;
+  --cds-productive-heading-06-font-size: 2.625rem;
+  --cds-productive-heading-06-font-weight: 300;
+  --cds-productive-heading-06-line-height: 1.199;
+  --cds-productive-heading-06-letter-spacing: 0;
+  --cds-productive-heading-07-font-size: 3.375rem;
+  --cds-productive-heading-07-font-weight: 300;
+  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-letter-spacing: 0;
+  --cds-expressive-paragraph-01-font-size: 1.5rem;
+  --cds-expressive-paragraph-01-font-weight: 300;
+  --cds-expressive-paragraph-01-line-height: 1.334;
+  --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-expressive-heading-01-font-size: 0.875rem;
+  --cds-expressive-heading-01-font-weight: 600;
+  --cds-expressive-heading-01-line-height: 1.42857;
+  --cds-expressive-heading-01-letter-spacing: 0.16px;
+  --cds-expressive-heading-02-font-size: 1rem;
+  --cds-expressive-heading-02-font-weight: 600;
+  --cds-expressive-heading-02-line-height: 1.5;
+  --cds-expressive-heading-02-letter-spacing: 0;
+  --cds-expressive-heading-03-font-size: 1.25rem;
+  --cds-expressive-heading-03-font-weight: 400;
+  --cds-expressive-heading-03-line-height: 1.4;
+  --cds-expressive-heading-03-letter-spacing: 0;
+  --cds-expressive-heading-04-font-size: 1.75rem;
+  --cds-expressive-heading-04-font-weight: 400;
+  --cds-expressive-heading-04-line-height: 1.28572;
+  --cds-expressive-heading-04-letter-spacing: 0;
+  --cds-expressive-heading-05-font-size: 2rem;
+  --cds-expressive-heading-05-font-weight: 400;
+  --cds-expressive-heading-05-line-height: 1.25;
+  --cds-expressive-heading-05-letter-spacing: 0;
+  --cds-expressive-heading-06-font-size: 2rem;
+  --cds-expressive-heading-06-font-weight: 600;
+  --cds-expressive-heading-06-line-height: 1.25;
+  --cds-expressive-heading-06-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', serif;
+  --cds-quotation-01-font-size: 1.25rem;
+  --cds-quotation-01-font-weight: 400;
+  --cds-quotation-01-line-height: 1.3;
+  --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', serif;
+  --cds-quotation-02-font-size: 2rem;
+  --cds-quotation-02-font-weight: 300;
+  --cds-quotation-02-line-height: 1.25;
+  --cds-quotation-02-letter-spacing: 0;
+  --cds-display-01-font-size: 2.625rem;
+  --cds-display-01-font-weight: 300;
+  --cds-display-01-line-height: 1.19;
+  --cds-display-01-letter-spacing: 0;
+  --cds-display-02-font-size: 2.625rem;
+  --cds-display-02-font-weight: 600;
+  --cds-display-02-line-height: 1.19;
+  --cds-display-02-letter-spacing: 0;
+  --cds-display-03-font-size: 2.625rem;
+  --cds-display-03-font-weight: 300;
+  --cds-display-03-line-height: 1.19;
+  --cds-display-03-letter-spacing: 0;
+  --cds-display-04-font-size: 2.625rem;
+  --cds-display-04-font-weight: 300;
+  --cds-display-04-line-height: 1.19;
+  --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.19;
+  --cds-heading-07-letter-spacing: 0;
+}
+
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.FileDragDrop_module_dragDropWrapper__f1fc93a7 {
+  height: 100%;
+}
+
+.FileDragDrop_module_tearsheetDropzone__f1fc93a7 {
+  height: 100%;
+}
+
+.FileDragDrop_module_dragDropContainer__f1fc93a7 {
+  padding: 1rem;
+}
+.FileDragDrop_module_dragDropContainer__f1fc93a7.FileDragDrop_module_tearsheet__f1fc93a7 {
+  height: 100%;
+}
+
+.FileDragDrop_module_dragDropArea__f1fc93a7 {
+  border: 1px dashed var(--cds-ui-04);
+  visibility: visible;
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.FileDragDrop_module_dragDropArea__f1fc93a7.FileDragDrop_module_tearsheet__f1fc93a7 {
+  justify-content: center;
+}
+
+.FileDragDrop_module_dragDropAreaOnHover__f1fc93a7 {
+  border: 0.125rem solid var(--cds-focus);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.FileDragDrop_module_dragDropAreaOnHover__f1fc93a7.FileDragDrop_module_tearsheet__f1fc93a7 {
+  justify-content: center;
+}
+
+.FileDragDrop_module_dragDropText__f1fc93a7 {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  letter-spacing: 0.05em;
+}
+.FileDragDrop_module_dragDropText__f1fc93a7 .FileDragDrop_module_link__f1fc93a7 {
+  outline: none;
+}
+.FileDragDrop_module_dragDropText__f1fc93a7 a {
+  padding: 1rem 6rem 2.5rem 1rem;
+}
+.FileDragDrop_module_dragDropText__f1fc93a7 a:hover {
+  cursor: pointer;
+}
+.FileDragDrop_module_dragDropText__f1fc93a7 a:focus {
+  text-decoration: underline;
+  outline: 1px solid var(--cds-focus);
+}
+.FileDragDrop_module_dragDropText__f1fc93a7.FileDragDrop_module_dragDropTextCustom__f1fc93a7 {
+  letter-spacing: 0.05em;
+  padding: 0;
+}
+.FileDragDrop_module_dragDropText__f1fc93a7.FileDragDrop_module_dragDropTextPromptLab__f1fc93a7 {
+  gap: 1rem;
+  padding: 1.5rem 6rem 1.5rem 1rem;
+}
+
+.FileDragDrop_module_filesZoneContainer__f1fc93a7 {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 50rem;
+}
+.FileDragDrop_module_filesZoneContainer__f1fc93a7 .FileDragDrop_module_filesZoneTitle__f1fc93a7 {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
+  font-weight: 600;
+  font-weight: var(--cds-productive-heading-01-font-weight, 600);
+  line-height: 1.28572;
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
+  letter-spacing: 0.16px;
+  letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
+}
+.FileDragDrop_module_filesZoneContainer__f1fc93a7 .FileDragDrop_module_filesZoneTitle__f1fc93a7.FileDragDrop_module_tearsheet__f1fc93a7 {
+  font-size: 1.25rem;
+  font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
+  font-weight: 400;
+  font-weight: var(--cds-productive-heading-03-font-weight, 400);
+  line-height: 1.4;
+  line-height: var(--cds-productive-heading-03-line-height, 1.4);
+  letter-spacing: 0;
+  letter-spacing: var(--cds-productive-heading-03-letter-spacing, 0);
+}
+.FileDragDrop_module_filesZoneContainer__f1fc93a7 .FileDragDrop_module_filesZoneDesc__f1fc93a7 {
+  color: var(--cds-text-02);
+  max-width: 19rem;
+  font-size: 0.75rem;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: 400;
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: 1.33333;
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: 0.32px;
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+}
+
+.FileDragDrop_module_dragDropButtons__f1fc93a7 {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+.FileDragDrop_module_dragDropButtons__f1fc93a7 .FileDragDrop_module_customButton__f1fc93a7 {
+  margin-left: 1rem;
+}
+
+.FileDragDrop_module_dragDropContents__f1fc93a7 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: -2rem;
+}
+.FileDragDrop_module_dragDropContents__f1fc93a7 .FileDragDrop_module_dragDropGraphic__f1fc93a7 {
+  height: 10rem;
+  width: 10rem;
+}
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+:root {
+  --cds-caption-01-font-size: 0.75rem;
+  --cds-caption-01-font-weight: 400;
+  --cds-caption-01-line-height: 1.33333;
+  --cds-caption-01-letter-spacing: 0.32px;
+  --cds-caption-02-font-size: 0.875rem;
+  --cds-caption-02-font-weight: 400;
+  --cds-caption-02-line-height: 1.28572;
+  --cds-caption-02-letter-spacing: 0.32px;
+  --cds-label-01-font-size: 0.75rem;
+  --cds-label-01-font-weight: 400;
+  --cds-label-01-line-height: 1.33333;
+  --cds-label-01-letter-spacing: 0.32px;
+  --cds-label-02-font-size: 0.875rem;
+  --cds-label-02-font-weight: 400;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
+  --cds-helper-text-01-font-size: 0.75rem;
+  --cds-helper-text-01-line-height: 1.33333;
+  --cds-helper-text-01-letter-spacing: 0.32px;
+  --cds-helper-text-02-font-size: 0.875rem;
+  --cds-helper-text-02-font-weight: 400;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
+  --cds-body-short-01-font-size: 0.875rem;
+  --cds-body-short-01-font-weight: 400;
+  --cds-body-short-01-line-height: 1.28572;
+  --cds-body-short-01-letter-spacing: 0.16px;
+  --cds-body-short-02-font-size: 1rem;
+  --cds-body-short-02-font-weight: 400;
+  --cds-body-short-02-line-height: 1.375;
+  --cds-body-short-02-letter-spacing: 0;
+  --cds-body-long-01-font-size: 0.875rem;
+  --cds-body-long-01-font-weight: 400;
+  --cds-body-long-01-line-height: 1.42857;
+  --cds-body-long-01-letter-spacing: 0.16px;
+  --cds-body-long-02-font-size: 1rem;
+  --cds-body-long-02-font-weight: 400;
+  --cds-body-long-02-line-height: 1.5;
+  --cds-body-long-02-letter-spacing: 0;
+  --cds-code-01-font-family: 'IBM Plex Mono', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', monospace;
+  --cds-code-01-font-size: 0.75rem;
+  --cds-code-01-font-weight: 400;
+  --cds-code-01-line-height: 1.33333;
+  --cds-code-01-letter-spacing: 0.32px;
+  --cds-code-02-font-family: 'IBM Plex Mono', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', monospace;
+  --cds-code-02-font-size: 0.875rem;
+  --cds-code-02-font-weight: 400;
+  --cds-code-02-line-height: 1.42857;
+  --cds-code-02-letter-spacing: 0.32px;
+  --cds-heading-01-font-size: 0.875rem;
+  --cds-heading-01-font-weight: 600;
+  --cds-heading-01-line-height: 1.42857;
+  --cds-heading-01-letter-spacing: 0.16px;
+  --cds-heading-02-font-size: 1rem;
+  --cds-heading-02-font-weight: 600;
+  --cds-heading-02-line-height: 1.5;
+  --cds-heading-02-letter-spacing: 0;
+  --cds-productive-heading-01-font-size: 0.875rem;
+  --cds-productive-heading-01-font-weight: 600;
+  --cds-productive-heading-01-line-height: 1.28572;
+  --cds-productive-heading-01-letter-spacing: 0.16px;
+  --cds-productive-heading-02-font-size: 1rem;
+  --cds-productive-heading-02-font-weight: 600;
+  --cds-productive-heading-02-line-height: 1.375;
+  --cds-productive-heading-02-letter-spacing: 0;
+  --cds-productive-heading-03-font-size: 1.25rem;
+  --cds-productive-heading-03-font-weight: 400;
+  --cds-productive-heading-03-line-height: 1.4;
+  --cds-productive-heading-03-letter-spacing: 0;
+  --cds-productive-heading-04-font-size: 1.75rem;
+  --cds-productive-heading-04-font-weight: 400;
+  --cds-productive-heading-04-line-height: 1.28572;
+  --cds-productive-heading-04-letter-spacing: 0;
+  --cds-productive-heading-05-font-size: 2rem;
+  --cds-productive-heading-05-font-weight: 400;
+  --cds-productive-heading-05-line-height: 1.25;
+  --cds-productive-heading-05-letter-spacing: 0;
+  --cds-productive-heading-06-font-size: 2.625rem;
+  --cds-productive-heading-06-font-weight: 300;
+  --cds-productive-heading-06-line-height: 1.199;
+  --cds-productive-heading-06-letter-spacing: 0;
+  --cds-productive-heading-07-font-size: 3.375rem;
+  --cds-productive-heading-07-font-weight: 300;
+  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-letter-spacing: 0;
+  --cds-expressive-paragraph-01-font-size: 1.5rem;
+  --cds-expressive-paragraph-01-font-weight: 300;
+  --cds-expressive-paragraph-01-line-height: 1.334;
+  --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-expressive-heading-01-font-size: 0.875rem;
+  --cds-expressive-heading-01-font-weight: 600;
+  --cds-expressive-heading-01-line-height: 1.42857;
+  --cds-expressive-heading-01-letter-spacing: 0.16px;
+  --cds-expressive-heading-02-font-size: 1rem;
+  --cds-expressive-heading-02-font-weight: 600;
+  --cds-expressive-heading-02-line-height: 1.5;
+  --cds-expressive-heading-02-letter-spacing: 0;
+  --cds-expressive-heading-03-font-size: 1.25rem;
+  --cds-expressive-heading-03-font-weight: 400;
+  --cds-expressive-heading-03-line-height: 1.4;
+  --cds-expressive-heading-03-letter-spacing: 0;
+  --cds-expressive-heading-04-font-size: 1.75rem;
+  --cds-expressive-heading-04-font-weight: 400;
+  --cds-expressive-heading-04-line-height: 1.28572;
+  --cds-expressive-heading-04-letter-spacing: 0;
+  --cds-expressive-heading-05-font-size: 2rem;
+  --cds-expressive-heading-05-font-weight: 400;
+  --cds-expressive-heading-05-line-height: 1.25;
+  --cds-expressive-heading-05-letter-spacing: 0;
+  --cds-expressive-heading-06-font-size: 2rem;
+  --cds-expressive-heading-06-font-weight: 600;
+  --cds-expressive-heading-06-line-height: 1.25;
+  --cds-expressive-heading-06-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', serif;
+  --cds-quotation-01-font-size: 1.25rem;
+  --cds-quotation-01-font-weight: 400;
+  --cds-quotation-01-line-height: 1.3;
+  --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', serif;
+  --cds-quotation-02-font-size: 2rem;
+  --cds-quotation-02-font-weight: 300;
+  --cds-quotation-02-line-height: 1.25;
+  --cds-quotation-02-letter-spacing: 0;
+  --cds-display-01-font-size: 2.625rem;
+  --cds-display-01-font-weight: 300;
+  --cds-display-01-line-height: 1.19;
+  --cds-display-01-letter-spacing: 0;
+  --cds-display-02-font-size: 2.625rem;
+  --cds-display-02-font-weight: 600;
+  --cds-display-02-line-height: 1.19;
+  --cds-display-02-letter-spacing: 0;
+  --cds-display-03-font-size: 2.625rem;
+  --cds-display-03-font-weight: 300;
+  --cds-display-03-line-height: 1.19;
+  --cds-display-03-letter-spacing: 0;
+  --cds-display-04-font-size: 2.625rem;
+  --cds-display-04-font-weight: 300;
+  --cds-display-04-line-height: 1.19;
+  --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.19;
+  --cds-heading-07-letter-spacing: 0;
+}
+
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.UploadModal_module_modalBody__268faf6d {
+  padding: 1rem;
+}
+.UploadModal_module_modalBody__268faf6d .UploadModal_module_textInputContainer__268faf6d {
+  margin-top: 1rem;
+}
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2022. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+:root {
+  --cds-caption-01-font-size: 0.75rem;
+  --cds-caption-01-font-weight: 400;
+  --cds-caption-01-line-height: 1.33333;
+  --cds-caption-01-letter-spacing: 0.32px;
+  --cds-caption-02-font-size: 0.875rem;
+  --cds-caption-02-font-weight: 400;
+  --cds-caption-02-line-height: 1.28572;
+  --cds-caption-02-letter-spacing: 0.32px;
+  --cds-label-01-font-size: 0.75rem;
+  --cds-label-01-font-weight: 400;
+  --cds-label-01-line-height: 1.33333;
+  --cds-label-01-letter-spacing: 0.32px;
+  --cds-label-02-font-size: 0.875rem;
+  --cds-label-02-font-weight: 400;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
+  --cds-helper-text-01-font-size: 0.75rem;
+  --cds-helper-text-01-line-height: 1.33333;
+  --cds-helper-text-01-letter-spacing: 0.32px;
+  --cds-helper-text-02-font-size: 0.875rem;
+  --cds-helper-text-02-font-weight: 400;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
+  --cds-body-short-01-font-size: 0.875rem;
+  --cds-body-short-01-font-weight: 400;
+  --cds-body-short-01-line-height: 1.28572;
+  --cds-body-short-01-letter-spacing: 0.16px;
+  --cds-body-short-02-font-size: 1rem;
+  --cds-body-short-02-font-weight: 400;
+  --cds-body-short-02-line-height: 1.375;
+  --cds-body-short-02-letter-spacing: 0;
+  --cds-body-long-01-font-size: 0.875rem;
+  --cds-body-long-01-font-weight: 400;
+  --cds-body-long-01-line-height: 1.42857;
+  --cds-body-long-01-letter-spacing: 0.16px;
+  --cds-body-long-02-font-size: 1rem;
+  --cds-body-long-02-font-weight: 400;
+  --cds-body-long-02-line-height: 1.5;
+  --cds-body-long-02-letter-spacing: 0;
+  --cds-code-01-font-family: 'IBM Plex Mono', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', monospace;
+  --cds-code-01-font-size: 0.75rem;
+  --cds-code-01-font-weight: 400;
+  --cds-code-01-line-height: 1.33333;
+  --cds-code-01-letter-spacing: 0.32px;
+  --cds-code-02-font-family: 'IBM Plex Mono', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', monospace;
+  --cds-code-02-font-size: 0.875rem;
+  --cds-code-02-font-weight: 400;
+  --cds-code-02-line-height: 1.42857;
+  --cds-code-02-letter-spacing: 0.32px;
+  --cds-heading-01-font-size: 0.875rem;
+  --cds-heading-01-font-weight: 600;
+  --cds-heading-01-line-height: 1.42857;
+  --cds-heading-01-letter-spacing: 0.16px;
+  --cds-heading-02-font-size: 1rem;
+  --cds-heading-02-font-weight: 600;
+  --cds-heading-02-line-height: 1.5;
+  --cds-heading-02-letter-spacing: 0;
+  --cds-productive-heading-01-font-size: 0.875rem;
+  --cds-productive-heading-01-font-weight: 600;
+  --cds-productive-heading-01-line-height: 1.28572;
+  --cds-productive-heading-01-letter-spacing: 0.16px;
+  --cds-productive-heading-02-font-size: 1rem;
+  --cds-productive-heading-02-font-weight: 600;
+  --cds-productive-heading-02-line-height: 1.375;
+  --cds-productive-heading-02-letter-spacing: 0;
+  --cds-productive-heading-03-font-size: 1.25rem;
+  --cds-productive-heading-03-font-weight: 400;
+  --cds-productive-heading-03-line-height: 1.4;
+  --cds-productive-heading-03-letter-spacing: 0;
+  --cds-productive-heading-04-font-size: 1.75rem;
+  --cds-productive-heading-04-font-weight: 400;
+  --cds-productive-heading-04-line-height: 1.28572;
+  --cds-productive-heading-04-letter-spacing: 0;
+  --cds-productive-heading-05-font-size: 2rem;
+  --cds-productive-heading-05-font-weight: 400;
+  --cds-productive-heading-05-line-height: 1.25;
+  --cds-productive-heading-05-letter-spacing: 0;
+  --cds-productive-heading-06-font-size: 2.625rem;
+  --cds-productive-heading-06-font-weight: 300;
+  --cds-productive-heading-06-line-height: 1.199;
+  --cds-productive-heading-06-letter-spacing: 0;
+  --cds-productive-heading-07-font-size: 3.375rem;
+  --cds-productive-heading-07-font-weight: 300;
+  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-letter-spacing: 0;
+  --cds-expressive-paragraph-01-font-size: 1.5rem;
+  --cds-expressive-paragraph-01-font-weight: 300;
+  --cds-expressive-paragraph-01-line-height: 1.334;
+  --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-expressive-heading-01-font-size: 0.875rem;
+  --cds-expressive-heading-01-font-weight: 600;
+  --cds-expressive-heading-01-line-height: 1.42857;
+  --cds-expressive-heading-01-letter-spacing: 0.16px;
+  --cds-expressive-heading-02-font-size: 1rem;
+  --cds-expressive-heading-02-font-weight: 600;
+  --cds-expressive-heading-02-line-height: 1.5;
+  --cds-expressive-heading-02-letter-spacing: 0;
+  --cds-expressive-heading-03-font-size: 1.25rem;
+  --cds-expressive-heading-03-font-weight: 400;
+  --cds-expressive-heading-03-line-height: 1.4;
+  --cds-expressive-heading-03-letter-spacing: 0;
+  --cds-expressive-heading-04-font-size: 1.75rem;
+  --cds-expressive-heading-04-font-weight: 400;
+  --cds-expressive-heading-04-line-height: 1.28572;
+  --cds-expressive-heading-04-letter-spacing: 0;
+  --cds-expressive-heading-05-font-size: 2rem;
+  --cds-expressive-heading-05-font-weight: 400;
+  --cds-expressive-heading-05-line-height: 1.25;
+  --cds-expressive-heading-05-letter-spacing: 0;
+  --cds-expressive-heading-06-font-size: 2rem;
+  --cds-expressive-heading-06-font-weight: 600;
+  --cds-expressive-heading-06-line-height: 1.25;
+  --cds-expressive-heading-06-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', serif;
+  --cds-quotation-01-font-size: 1.25rem;
+  --cds-quotation-01-font-weight: 400;
+  --cds-quotation-01-line-height: 1.3;
+  --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', serif;
+  --cds-quotation-02-font-size: 2rem;
+  --cds-quotation-02-font-weight: 300;
+  --cds-quotation-02-line-height: 1.25;
+  --cds-quotation-02-letter-spacing: 0;
+  --cds-display-01-font-size: 2.625rem;
+  --cds-display-01-font-weight: 300;
+  --cds-display-01-line-height: 1.19;
+  --cds-display-01-letter-spacing: 0;
+  --cds-display-02-font-size: 2.625rem;
+  --cds-display-02-font-weight: 600;
+  --cds-display-02-line-height: 1.19;
+  --cds-display-02-letter-spacing: 0;
+  --cds-display-03-font-size: 2.625rem;
+  --cds-display-03-font-weight: 300;
+  --cds-display-03-line-height: 1.19;
+  --cds-display-03-letter-spacing: 0;
+  --cds-display-04-font-size: 2.625rem;
+  --cds-display-04-font-weight: 300;
+  --cds-display-04-line-height: 1.19;
+  --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.19;
+  --cds-heading-07-letter-spacing: 0;
+}
+
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd {
+  border-top: 1px solid var(--cds-ui-03);
+  padding: 1rem;
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd:last-child {
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_descriptionContainer__d099d9cd {
+  display: flex;
+  justify-content: space-between;
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_descriptionContainer__d099d9cd .DataPanelProgressBar_module_dismissButton__d099d9cd {
+  font-size: 0.875rem;
+  font-size: var(--cds-body-short-01-font-size, 0.875rem);
+  font-weight: 400;
+  font-weight: var(--cds-body-short-01-font-weight, 400);
+  line-height: 1.28572;
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
+  letter-spacing: 0.16px;
+  letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_description__d099d9cd {
+  color: var(--cds-text-02);
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_iconContainer__d099d9cd {
+  margin-right: 0.5rem;
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_iconContainer__d099d9cd .DataPanelProgressBar_module_errorIcon__d099d9cd {
+  fill: var(--cds-text-error);
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_filename__d099d9cd {
+  font-size: 0.875rem;
+  font-size: var(--cds-body-short-01-font-size, 0.875rem);
+  font-weight: 400;
+  font-weight: var(--cds-body-short-01-font-weight, 400);
+  line-height: 1.28572;
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
+  letter-spacing: 0.16px;
+  letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
+  max-width: 250px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  color: var(--cds-text-01);
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_title__d099d9cd {
+  font-size: 0.875rem;
+  font-size: var(--cds-label-02-font-size, 0.875rem);
+  font-weight: 400;
+  font-weight: var(--cds-label-02-font-weight, 400);
+  line-height: 1.28572;
+  line-height: var(--cds-label-02-line-height, 1.28572);
+  letter-spacing: 0.16px;
+  letter-spacing: var(--cds-label-02-letter-spacing, 0.16px);
+  display: flex;
+  align-items: center;
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_title__d099d9cd .DataPanelProgressBar_module_iconContainer__d099d9cd {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_title__d099d9cd .DataPanelProgressBar_module_iconContainer__d099d9cd svg {
+  margin-right: 0.25rem;
+  z-index: 1;
+}
+.DataPanelProgressBar_module_uploadProgressContainer__d099d9cd .DataPanelProgressBar_module_title__d099d9cd .DataPanelProgressBar_module_iconContainer__d099d9cd .DataPanelProgressBar_module_iconBackground__d099d9cd {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  left: 0.125rem;
+  top: 0.125rem;
+}
+
+.DataPanelProgressBar_module_uploadProgressContainerCustom__d099d9cd {
+  display: none;
+}
+
+.DataPanelProgressBar_module_selectedAssetsContainer__d099d9cd {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.DataPanelProgressBar_module_selectedAssetsContainer__d099d9cd .DataPanelProgressBar_module_selectedAsset__d099d9cd {
+  background: var(--cds-ui-01);
+  min-height: 3.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DataPanelProgressBar_module_selectedAssetsContainer__d099d9cd .DataPanelProgressBar_module_selectedAsset__d099d9cd .DataPanelProgressBar_module_assetName__d099d9cd {
+  font-size: 0.875rem;
+  font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
+  font-weight: 600;
+  font-weight: var(--cds-productive-heading-01-font-weight, 600);
+  line-height: 1.28572;
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
+  letter-spacing: 0.16px;
+  letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
+  color: var(--cds-text-02);
+  margin-bottom: 0.25rem;
+  max-width: 285px;
+}
+.DataPanelProgressBar_module_selectedAssetsContainer__d099d9cd .DataPanelProgressBar_module_selectedAsset__d099d9cd .DataPanelProgressBar_module_assetName__d099d9cd .DataPanelProgressBar_module_size__d099d9cd {
+  font-size: 0.75rem;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: 400;
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: 1.33333;
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: 0.32px;
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+}
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2022. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+:root {
+  --cds-caption-01-font-size: 0.75rem;
+  --cds-caption-01-font-weight: 400;
+  --cds-caption-01-line-height: 1.33333;
+  --cds-caption-01-letter-spacing: 0.32px;
+  --cds-caption-02-font-size: 0.875rem;
+  --cds-caption-02-font-weight: 400;
+  --cds-caption-02-line-height: 1.28572;
+  --cds-caption-02-letter-spacing: 0.32px;
+  --cds-label-01-font-size: 0.75rem;
+  --cds-label-01-font-weight: 400;
+  --cds-label-01-line-height: 1.33333;
+  --cds-label-01-letter-spacing: 0.32px;
+  --cds-label-02-font-size: 0.875rem;
+  --cds-label-02-font-weight: 400;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
+  --cds-helper-text-01-font-size: 0.75rem;
+  --cds-helper-text-01-line-height: 1.33333;
+  --cds-helper-text-01-letter-spacing: 0.32px;
+  --cds-helper-text-02-font-size: 0.875rem;
+  --cds-helper-text-02-font-weight: 400;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
+  --cds-body-short-01-font-size: 0.875rem;
+  --cds-body-short-01-font-weight: 400;
+  --cds-body-short-01-line-height: 1.28572;
+  --cds-body-short-01-letter-spacing: 0.16px;
+  --cds-body-short-02-font-size: 1rem;
+  --cds-body-short-02-font-weight: 400;
+  --cds-body-short-02-line-height: 1.375;
+  --cds-body-short-02-letter-spacing: 0;
+  --cds-body-long-01-font-size: 0.875rem;
+  --cds-body-long-01-font-weight: 400;
+  --cds-body-long-01-line-height: 1.42857;
+  --cds-body-long-01-letter-spacing: 0.16px;
+  --cds-body-long-02-font-size: 1rem;
+  --cds-body-long-02-font-weight: 400;
+  --cds-body-long-02-line-height: 1.5;
+  --cds-body-long-02-letter-spacing: 0;
+  --cds-code-01-font-family: 'IBM Plex Mono', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', monospace;
+  --cds-code-01-font-size: 0.75rem;
+  --cds-code-01-font-weight: 400;
+  --cds-code-01-line-height: 1.33333;
+  --cds-code-01-letter-spacing: 0.32px;
+  --cds-code-02-font-family: 'IBM Plex Mono', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', monospace;
+  --cds-code-02-font-size: 0.875rem;
+  --cds-code-02-font-weight: 400;
+  --cds-code-02-line-height: 1.42857;
+  --cds-code-02-letter-spacing: 0.32px;
+  --cds-heading-01-font-size: 0.875rem;
+  --cds-heading-01-font-weight: 600;
+  --cds-heading-01-line-height: 1.42857;
+  --cds-heading-01-letter-spacing: 0.16px;
+  --cds-heading-02-font-size: 1rem;
+  --cds-heading-02-font-weight: 600;
+  --cds-heading-02-line-height: 1.5;
+  --cds-heading-02-letter-spacing: 0;
+  --cds-productive-heading-01-font-size: 0.875rem;
+  --cds-productive-heading-01-font-weight: 600;
+  --cds-productive-heading-01-line-height: 1.28572;
+  --cds-productive-heading-01-letter-spacing: 0.16px;
+  --cds-productive-heading-02-font-size: 1rem;
+  --cds-productive-heading-02-font-weight: 600;
+  --cds-productive-heading-02-line-height: 1.375;
+  --cds-productive-heading-02-letter-spacing: 0;
+  --cds-productive-heading-03-font-size: 1.25rem;
+  --cds-productive-heading-03-font-weight: 400;
+  --cds-productive-heading-03-line-height: 1.4;
+  --cds-productive-heading-03-letter-spacing: 0;
+  --cds-productive-heading-04-font-size: 1.75rem;
+  --cds-productive-heading-04-font-weight: 400;
+  --cds-productive-heading-04-line-height: 1.28572;
+  --cds-productive-heading-04-letter-spacing: 0;
+  --cds-productive-heading-05-font-size: 2rem;
+  --cds-productive-heading-05-font-weight: 400;
+  --cds-productive-heading-05-line-height: 1.25;
+  --cds-productive-heading-05-letter-spacing: 0;
+  --cds-productive-heading-06-font-size: 2.625rem;
+  --cds-productive-heading-06-font-weight: 300;
+  --cds-productive-heading-06-line-height: 1.199;
+  --cds-productive-heading-06-letter-spacing: 0;
+  --cds-productive-heading-07-font-size: 3.375rem;
+  --cds-productive-heading-07-font-weight: 300;
+  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-letter-spacing: 0;
+  --cds-expressive-paragraph-01-font-size: 1.5rem;
+  --cds-expressive-paragraph-01-font-weight: 300;
+  --cds-expressive-paragraph-01-line-height: 1.334;
+  --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-expressive-heading-01-font-size: 0.875rem;
+  --cds-expressive-heading-01-font-weight: 600;
+  --cds-expressive-heading-01-line-height: 1.42857;
+  --cds-expressive-heading-01-letter-spacing: 0.16px;
+  --cds-expressive-heading-02-font-size: 1rem;
+  --cds-expressive-heading-02-font-weight: 600;
+  --cds-expressive-heading-02-line-height: 1.5;
+  --cds-expressive-heading-02-letter-spacing: 0;
+  --cds-expressive-heading-03-font-size: 1.25rem;
+  --cds-expressive-heading-03-font-weight: 400;
+  --cds-expressive-heading-03-line-height: 1.4;
+  --cds-expressive-heading-03-letter-spacing: 0;
+  --cds-expressive-heading-04-font-size: 1.75rem;
+  --cds-expressive-heading-04-font-weight: 400;
+  --cds-expressive-heading-04-line-height: 1.28572;
+  --cds-expressive-heading-04-letter-spacing: 0;
+  --cds-expressive-heading-05-font-size: 2rem;
+  --cds-expressive-heading-05-font-weight: 400;
+  --cds-expressive-heading-05-line-height: 1.25;
+  --cds-expressive-heading-05-letter-spacing: 0;
+  --cds-expressive-heading-06-font-size: 2rem;
+  --cds-expressive-heading-06-font-weight: 600;
+  --cds-expressive-heading-06-line-height: 1.25;
+  --cds-expressive-heading-06-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', serif;
+  --cds-quotation-01-font-size: 1.25rem;
+  --cds-quotation-01-font-weight: 400;
+  --cds-quotation-01-line-height: 1.3;
+  --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, '.SFNSText-Regular', serif;
+  --cds-quotation-02-font-size: 2rem;
+  --cds-quotation-02-font-weight: 300;
+  --cds-quotation-02-line-height: 1.25;
+  --cds-quotation-02-letter-spacing: 0;
+  --cds-display-01-font-size: 2.625rem;
+  --cds-display-01-font-weight: 300;
+  --cds-display-01-line-height: 1.19;
+  --cds-display-01-letter-spacing: 0;
+  --cds-display-02-font-size: 2.625rem;
+  --cds-display-02-font-weight: 600;
+  --cds-display-02-line-height: 1.19;
+  --cds-display-02-letter-spacing: 0;
+  --cds-display-03-font-size: 2.625rem;
+  --cds-display-03-font-weight: 300;
+  --cds-display-03-line-height: 1.19;
+  --cds-display-03-letter-spacing: 0;
+  --cds-display-04-font-size: 2.625rem;
+  --cds-display-04-font-weight: 300;
+  --cds-display-04-line-height: 1.19;
+  --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.19;
+  --cds-heading-07-letter-spacing: 0;
+}
+
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.dap--data-panel__wrapper {
+  height: 100%;
+  transition: height 240ms cubic-bezier(0.4, 0.14, 0.3, 1);
+}
+.dap--data-panel__wrapper .dap--default-panel {
+  height: 100%;
+}
+.dap--data-panel__wrapper .dap--rhs-panel {
+  visibility: hidden;
+  background-color: var(--cds-ui-01);
+  border-left: 1px solid var(--cds-ui-03);
+  top: 0;
+  bottom: 0;
+  width: 20rem;
+  right: 0;
+  z-index: 5;
+  position: fixed;
+  transform: translateX(110%) translateZ(0);
+  transition: transform 240ms cubic-bezier(0.4, 0.14, 0.3, 1);
+}
+.dap--data-panel__wrapper .dap--rhs-panel .bx--btn {
+  cursor: pointer;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__title {
+  font-size: 1.25rem;
+  font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
+  font-weight: 400;
+  font-weight: var(--cds-productive-heading-03-font-weight, 400);
+  line-height: 1.4;
+  line-height: var(--cds-productive-heading-03-line-height, 1.4);
+  letter-spacing: 0;
+  letter-spacing: var(--cds-productive-heading-03-letter-spacing, 0);
+  color: var(--cds-text-01);
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__select-folder-multi {
+  margin: 0 1.5rem 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__select-folder-multi .dap--rhs-panel__edit_icon:hover {
+  cursor: pointer;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__select-folder {
+  margin: 0 1.5rem 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__select-folder .dap--rhs-panel__edit_icon:hover {
+  cursor: pointer;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__select-folder-text {
+  font-size: 0.875rem;
+  font-size: var(--cds-label-02-font-size, 0.875rem);
+  font-weight: 400;
+  font-weight: var(--cds-label-02-font-weight, 400);
+  line-height: 1.28572;
+  line-height: var(--cds-label-02-line-height, 1.28572);
+  letter-spacing: 0.16px;
+  letter-spacing: var(--cds-label-02-letter-spacing, 0.16px);
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--cds-text-secondary);
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__select-folder-text a {
+  width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline;
+  margin-left: 0.25rem;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__select-folder-text a:hover {
+  cursor: pointer;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--rhs-panel__select-folder-icon {
+  fill: var(--cds-text-secondary);
+}
+.dap--data-panel__wrapper .dap--rhs-panel .dap--data-panel__progress {
+  overflow: hidden;
+}
+.dap--data-panel__wrapper .dap--rhs-panel .customContent {
+  width: 30rem;
+}
+.dap--data-panel__wrapper .dap--rhs--visible {
+  height: 100%;
+  visibility: visible;
+  transform: translateX(0) translateZ(0);
+  transition: transform 240ms cubic-bezier(0.4, 0.14, 0.3, 1);
+}
+.dap--data-panel__wrapper .dap--rhs--visible.tearsheet {
+  min-height: 14rem;
+}
+.dap--data-panel__wrapper .full {
+  height: 35%;
+}

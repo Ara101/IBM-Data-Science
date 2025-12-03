@@ -1,0 +1,63 @@
+BEGIN:VCALENDAR
+PRODID:-//zoom.us//iCalendar Event//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+CLASS:PUBLIC
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+LAST-MODIFIED:20250410T142247Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook/America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZNAME:PDT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:PST
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20250703T195624Z
+DTSTART;TZID=America/Los_Angeles:20250703T173000
+DTEND;TZID=America/Los_Angeles:20250703T195000
+SUMMARY:Robbie Wong's Zoom Meeting for PHARBE 503 2025
+RRULE:FREQ=WEEKLY;WKST=SU;UNTIL=20250822T025000Z;INTERVAL=1;BYDAY=TH
+UID:EVENTRpwP0YKEQIa5k43HbMdmnw@zoom.us
+TZID:America/Los_Angeles
+DESCRIPTION:Robbie Wong is inviting you to a scheduled Zoom meeting.\nJoi
+ n Zoom Meeting\nhttps://washington.zoom.us/j/93525317345?pwd=AEHjxcLTWCy
+ E7n0LmIVC7NeuJQ7Yy5.1\n\nMeeting ID: 935 2531 7345\nPasscode: 428297\n\n
+ ---\n\nOne tap mobile\n+12532158782\,\,93525317345#\,\,\,\,*428297# US (
+ Tacoma)\n+12063379723\,\,93525317345#\,\,\,\,*428297# US (Seattle)\n\n--
+ -\n\nDial by your location\n• +1 253 215 8782 US (Tacoma)\n• +1 206 337 
+ 9723 US (Seattle)\n• +1 602 753 0140 US (Phoenix)\n• +1 669 219 2599 US 
+ (San Jose)\n• +1 669 900 6833 US (San Jose)\n• +1 720 928 9299 US (Denve
+ r)\n• +1 971 247 1195 US (Portland)\n• +1 213 338 8477 US (Los Angeles)\
+ n• +1 346 248 7799 US (Houston)\n• +1 651 372 8299 US (Minnesota)\n• +1 
+ 786 635 1003 US (Miami)\n• +1 267 831 0333 US (Philadelphia)\n• +1 301 7
+ 15 8592 US (Washington DC)\n• +1 312 626 6799 US (Chicago)\n• +1 470 250
+  9358 US (Atlanta)\n• +1 470 381 2552 US (Atlanta)\n• +1 646 518 9805 US
+  (New York)\n• +1 646 876 9923 US (New York)\n\nMeeting ID: 935 2531 734
+ 5\nPasscode: 428297\n\nFind your local number: https://washington.zoom.u
+ s/u/aeEzh6eHqn\n\n---\n\nJoin by SIP\n• 93525317345@zoomcrc.com\n\n---\n
+ \nJoin by H.323\n• 144.195.19.161 (US West)\n• 206.247.11.121 (US East)\
+ n• 159.124.104.213 (Australia Sydney)\n• 159.124.74.212 (Australia Melbo
+ urne)\n• 159.124.168.213 (Canada Toronto)\n• 159.124.196.25 (Canada Vanc
+ ouver)\n\nMeeting ID: 935 2531 7345\nPasscode: 428297\n\n
+LOCATION:https://washington.zoom.us/j/93525317345?pwd=AEHjxcLTWCyE7n0LmIV
+ C7NeuJQ7Yy5.1
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

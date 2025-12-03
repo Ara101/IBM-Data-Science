@@ -1,0 +1,1582 @@
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2021, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2021, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.ax-composed-tearsheet-content--content {
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+}
+
+.ax-composed-tearsheet-content--bleed {
+  padding: 0;
+}
+
+.ax-composed-tearsheet-content--loadingContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ax-composed-tearsheet-content--loadingContainer > div {
+  z-index: 8000;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2021, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ax-composed-tearsheet-header--container {
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  background-color: var(--cds-ui-01);
+  border-bottom: var(--cds-ui-03) 1px solid;
+}
+
+.ax-composed-tearsheet-header--container-light {
+  background-color: var(--cds-layer-02);
+}
+
+.ax-composed-tearsheet-header--trigger-item {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  color: var(--cds-text-02);
+  height: 1rem;
+  margin-bottom: 0.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ax-composed-tearsheet-header--description {
+  margin-top: 0.5rem;
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2021, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ax-composed-tearsheet-influencer--container {
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  background-color: var(--cds-ui-01);
+  border-right: var(--cds-ui-03) 1px solid;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.ax-composed-tearsheet-influencer--small {
+  width: 256px;
+}
+
+.ax-composed-tearsheet-influencer--medium {
+  width: 320px;
+}
+
+.ax-composed-tearsheet-influencer--bleed {
+  padding: 0;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2021, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ax-composed-tearsheet-navigation--container {
+  width: 100%;
+  border-top: var(--cds-ui-03) 1px solid;
+  background-color: var(--cds-background);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.ax-composed-tearsheet-navigation--container .ax-composed-tearsheet-navigation--button {
+  max-width: 14.5rem;
+  flex: 0 1 25%;
+}
+.ax-composed-tearsheet-navigation--container .ax-composed-tearsheet-navigation--ghostButton {
+  flex: 1 1 50%;
+  max-width: none;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2021, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ax-composed-tearsheet-notification--container {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2025
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ax-composed-tearsheet-sidenav-navPageSideNav {
+  /* 
+  	Overriding carbon styles.
+  	SideNav component not loading correct dark theme colors.
+  	Design specified different styles.
+  */
+}
+.ax-composed-tearsheet-sidenav-navPageSideNav > nav {
+  position: relative;
+  background-color: var(--cds-ui-01);
+  display: inline;
+}
+.ax-composed-tearsheet-sidenav-navPageSideNav .ax-composed-tearsheet-sidenav-navPageSideNavItem {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  align-items: center;
+}
+.ax-composed-tearsheet-sidenav-navPageSideNav .ax-composed-tearsheet-sidenav-navPageSideNavItem > div.cds--side-nav__icon {
+  margin-right: 0.625rem;
+  color: var(--cds-text-01);
+}
+.ax-composed-tearsheet-sidenav-navPageSideNav .ax-composed-tearsheet-sidenav-navPageSideNavItem .ax-composed-tearsheet-sidenav-navPageNavItemTitle {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+}
+.ax-composed-tearsheet-sidenav-navPageSideNav .ax-composed-tearsheet-sidenav-navPageSideNavItem-current {
+  background-color: var(--cds-ui-03);
+}
+.ax-composed-tearsheet-sidenav-navPageSideNav .ax-composed-tearsheet-sidenav-navPageSideNavItem-current .ax-composed-tearsheet-sidenav-navPageNavItemTitle {
+  font-size: var(--cds-heading-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-heading-compact-01-font-weight, 600);
+  line-height: var(--cds-heading-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-heading-compact-01-letter-spacing, 0.16px);
+}
+
+.ax-composed-tearsheet--container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+.ax-composed-tearsheet--main {
+  flex: 1;
+  display: flex;
+  overflow-y: hidden;
+}
+
+.ax-composed-tearsheet--right {
+  flex: 1;
+  flex-flow: column;
+  display: flex;
+}
+.ax-composed-tearsheet--right > :nth-child(2) {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ax-nb-run-details--tile-title {
+  display: flex;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  padding-bottom: 0.5rem;
+}
+
+.ax-nb-run-details--tile {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.ax-nb-run-details--tile-subtitle {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  padding-bottom: 0.5rem;
+}
+
+.ax-nb-run-details--tile-content {
+  padding-bottom: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ax-nb-run-details--link-title {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  padding-bottom: 0.5rem;
+  display: inline-flex;
+}
+.ax-nb-run-details--link-title .ax-nb-run-details--resource-usage-tooltip-icon {
+  display: inline-block;
+  margin: 0 0 0 0.25rem;
+  vertical-align: middle;
+  position: relative;
+  line-height: 1.14em;
+  top: 0.125rem;
+}
+
+.ax-nb-run-details--link-content {
+  display: flex;
+  padding-bottom: 0.5rem;
+}
+.ax-nb-run-details--link-content .link-container {
+  padding-left: 0.5rem;
+}
+
+.ax-nb-run-details--progress-content {
+  padding-bottom: 0.5rem;
+}
+
+.ax-nb-run-details--config-line {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ax-nb-run-details--infoIcon {
+  fill: var(--cds-interactive-01);
+  background-color: inherit;
+  width: 1.14em;
+  height: 1.14em;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (c) Copyright IBM Corporation 2023. All Rights Reserved.
+ *
+ * Note to U.S. Government Users Restricted Rights:
+ * Use, duplication or disclosure restricted by GSA ADP Schedule
+ * Contract with IBM Corp.
+ *******************************************************************************/
+.ax-nb-job-flow-detail-view--heading {
+  font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
+  font-weight: var(--cds-productive-heading-03-font-weight, 400);
+  line-height: var(--cds-productive-heading-03-line-height, 1.4);
+  letter-spacing: var(--cds-productive-heading-03-letter-spacing, 0);
+  margin-bottom: 1rem;
+}
+
+.ax-nb-job-flow-detail-view--inline-notification {
+  margin-top: 0;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ax-nb-job-details--asset-container {
+  display: flex;
+}
+
+.ax-nb-job-details--asset-text {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  padding-left: 0.5rem;
+}
+
+.ax-nb-job-details--folderInlineEdit {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--cds-field-01);
+  padding-left: 1rem;
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+}
+
+.ax-nb-job-details--folderLabel > label {
+  -webkit-margin-after: 0.5rem !important;
+  margin-block-end: 0.5rem !important;
+}
+
+.ax-nb-job-details--folderPath {
+  flex-grow: 1;
+  align-self: center;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.dp-retention-config--retentionConfigContainer {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+
+.dp-retention-config--retentionConfigContainer, .dp-retention-config--sectionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+}
+
+.dp-retention-config--sectionContainer {
+  -webkit-box-orient: horizontal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  margin-bottom: 1.5rem;
+}
+
+.dp-retention-config--infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.dp-retention-config--infoContainer .cds--cds--label {
+  margin-bottom: unset;
+}
+
+.dp-retention-config--tooltip {
+  margin-left: 0.5rem;
+  text-align: left;
+}
+
+.dp-retention-config--sectionHeader {
+  font-size: var(--cds-heading-compact-02-font-size, 1rem);
+  font-weight: var(--cds-heading-compact-02-font-weight, 600);
+  line-height: var(--cds-heading-compact-02-line-height, 1.375);
+  letter-spacing: var(--cds-heading-compact-02-letter-spacing, 0);
+}
+
+.dp-retention-config--radioContainer {
+  margin-bottom: 1.5rem;
+}
+
+.dp-retention-config--numberInputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+
+.dp-retention-config--inputWrapper {
+  height: 100%;
+}
+
+.dp-retention-config--input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: calc(2.5rem + 0.125rem);
+}
+
+.dp-retention-config--daysString {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  margin-left: 0.5rem;
+}
+
+.dp-retention-config--numberInput .cds--number__input-wrapper {
+  margin-right: 0.5rem;
+  min-width: 0.5rem !important;
+  width: calc(2rem * 7) !important;
+}
+.dp-retention-config--numberInput .cds--number__input-wrapper::-webkit-inner-spin-button {
+  margin: 0;
+}
+
+.ax-nb-job-config--accordion--item--style .cds--accordion__content {
+  padding-inline-end: 0;
+}
+
+.ax-nb-job-config--spacing-top {
+  margin-top: 1rem !important;
+}
+
+.ax-nb-job-config--extra-spacing-top {
+  margin-top: 3rem !important;
+}
+
+.ax-nb-job-config--formgroup-empty-legend > .cds--label {
+  display: none;
+}
+
+.ax-nb-job-config--retention-config-container > div > div {
+  padding-top: 0;
+}
+
+.ax-nb-job-config--retention-config-open-container > div {
+  min-height: 130px; /* Need this to a avoid overlapping when displayed on the iframe tearsheet */
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2021, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.dp-notif-config--notifConfigContainer {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+
+.dp-notif-config--notifConfigContainer, .dp-notif-config--sectionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+}
+
+.dp-notif-config--sectionContainer {
+  -webkit-box-orient: horizontal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+}
+
+.dp-notif-config--infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  margin-bottom: 1.5rem;
+}
+.dp-notif-config--infoContainer .dp-notif-config--headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.dp-notif-config--infoContainer .cds--cds--label {
+  margin-bottom: unset;
+}
+
+.dp-notif-config--sectionHeader {
+  font-size: var(--cds-body-compact-02-font-size, 1rem);
+  font-weight: var(--cds-body-compact-02-font-weight, 400);
+  line-height: var(--cds-body-compact-02-line-height, 1.375);
+  letter-spacing: var(--cds-body-compact-02-letter-spacing, 0);
+}
+
+.dp-notif-config--inputContainer {
+  border-top: 1px solid var(--cds-border-subtle-01);
+  padding-top: 1.5rem;
+}
+
+.dp-notif-config--checkboxGroup {
+  padding-left: 1.5rem;
+}
+
+.dp-notif-config--errorLabelContainer {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  fill: var(--cds-support-error) !important;
+  color: var(--cds-support-error) !important;
+  padding-top: 0.5rem;
+}
+.dp-notif-config--errorLabelContainer .dp-notif-config--errorLabel {
+  padding-left: 0.25rem;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.dp-retention-config-text--retention-text p {
+  font-size: var(--cds-helper-text-01-font-size, 0.75rem);
+  line-height: var(--cds-helper-text-01-line-height, 1.33333);
+  letter-spacing: var(--cds-helper-text-01-letter-spacing, 0.32px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.dp-notif-config-tile--notifConfigTileWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 6rem;
+  padding: 1rem;
+}
+
+.dp-notif-config-tile--detailsWrapper {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  margin-bottom: 1rem;
+}
+.dp-notif-config-tile--detailsWrapper label {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  color: var(--cds-text-secondary);
+}
+
+.dp-notif-config-tile--alertOnContainer {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  color: var(--cds-text-primary);
+  -webkit-box-flex: 0.1;
+  -ms-flex-positive: 0.1;
+  flex-grow: 0.1;
+  overflow: hidden;
+}
+
+.dp-notif-config-tile--detailsTile {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  color: var(--cds-text-primary);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.dp-notif-config-tile--detailsContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dp-notif-config-tile--verticalLine {
+  border-left: 1px solid var(--cds-border-subtle-01);
+  margin: 0 1rem;
+}
+
+.dp-notif-config-tile--noNotifConfigContent {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--cds-text-secondary);
+}
+
+.dp-scheduler-tile--horizontalDetailTile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 6rem;
+  padding: 1rem;
+}
+
+.dp-scheduler-tile--verticalDetailTile {
+  height: auto;
+  width: auto;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  border: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  flex-grow: 1;
+  margin-right: 1rem;
+  min-height: calc(6rem + 1.5rem);
+}
+
+.dp-scheduler-tile--scheduleDocumentationLink {
+  margin-left: 0.25rem;
+}
+
+.dp-scheduler-tile--detailsWrapper {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  margin-bottom: 1rem;
+}
+.dp-scheduler-tile--detailsWrapper .dp-scheduler-tile--reviewLabel {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  padding-bottom: 0.75rem !important;
+}
+.dp-scheduler-tile--detailsWrapper .dp-scheduler-tile--detailsLabel {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  color: var(--cds-text-secondary);
+}
+
+.dp-scheduler-tile--detailsTile {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  color: var(--cds-text-primary);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.dp-scheduler-tile--detailsContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dp-scheduler-tile--center {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.dp-scheduler-tile--verticalLine {
+  border-left: 1px solid var(--cds-border-subtle-01);
+  margin: 0 1rem;
+}
+
+.dp-scheduler-tile--noScheduleContent {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--cds-text-secondary);
+}
+.dp-scheduler-tile--noScheduleContent svg {
+  margin-right: 0.25rem;
+}
+
+.dp-scheduler-tile--contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+}
+.dp-scheduler-tile--contentContainer .dp-scheduler-tile--iconHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+.dp-scheduler-tile--contentContainer .dp-scheduler-tile--iconHeader .dp-scheduler-tile--icon {
+  fill: var(--cds-text-primary);
+  color: var(--cds-text-primary);
+}
+.dp-scheduler-tile--contentContainer .dp-scheduler-tile--iconHeader .dp-scheduler-tile--iconHeaderText {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  margin-left: 0.75rem;
+}
+.dp-scheduler-tile--contentContainer .dp-scheduler-tile--selectText {
+  margin-top: 0.75rem;
+}
+
+.ax-nb-job-review--tile-title {
+  display: flex;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  padding-bottom: 0.5rem;
+}
+.ax-nb-job-review--tile-title .icon {
+  padding-left: 0.5rem;
+}
+.ax-nb-job-review--tile-title .icon svg {
+  cursor: pointer;
+}
+
+.ax-nb-job-review--tile-subtitle {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  color: var(--cds-text-02);
+}
+
+.ax-nb-job-review--tile-content-name {
+  font-size: var(--cds-heading-04-font-size, 1.75rem);
+  font-weight: var(--cds-heading-04-font-weight, 400);
+  line-height: var(--cds-heading-04-line-height, 1.28572);
+  letter-spacing: var(--cds-heading-04-letter-spacing, 0);
+}
+
+.ax-nb-job-review--tile-content-font {
+  font-size: var(--cds-body-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-01-font-weight, 400);
+  line-height: var(--cds-body-01-line-height, 1.42857);
+  letter-spacing: var(--cds-body-01-letter-spacing, 0.16px);
+  color: var(--cds-text-01);
+}
+
+.ax-nb-job-review--tile-content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.prefix--row-space {
+  row-gap: 1.5rem !important;
+}
+
+.ax-nb-job-review--top-spacing {
+  padding-top: 1.5rem !important;
+}
+
+.ax-nb-job-review--spacing-top-sm {
+  padding-top: 0.5rem !important;
+}
+
+.ax-nb-job-review--padding-tile {
+  padding: 0 !important;
+  width: -webkit-fill-available;
+}
+.ax-nb-job-review--padding-tile .cds--contained-list__action {
+  position: relative;
+}
+.ax-nb-job-review--padding-tile .cds--contained-list > ul {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.ax-nb-job-review--containerItem::before {
+  block-size: 0 !important;
+}
+
+.ax-nb-job-review--containerItem .dp-scheduler-tile--verticalDetailTile {
+  padding: 0 !important;
+}
+
+.ax-nb-job-review--containedList .cds--contained-list__header {
+  position: unset;
+}
+.ax-nb-job-review--containedList .cds--contained-list__action {
+  position: absolute;
+  right: 0;
+}
+
+.ax-nb-job-review--editButton {
+  padding: 0.5rem;
+  transition: opacity 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+.ax-nb-job-review--editButton:hover {
+  cursor: pointer;
+}
+
+.ax-nb-job-review--action-link {
+  cursor: pointer;
+}
+
+.ax-nb-job-review--asset-container {
+  display: flex;
+}
+
+.ax-nb-job-review--asset-text {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ax-nb-job-review--asset-desc {
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ax-nb-job-review--asset-icon {
+  display: flex;
+  align-items: center;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2023
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.dp-scheduler--schedulerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+
+.dp-scheduler--scheduleTitle {
+  font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
+  font-weight: var(--cds-productive-heading-03-font-weight, 400);
+  line-height: var(--cds-productive-heading-03-line-height, 1.4);
+  letter-spacing: var(--cds-productive-heading-03-letter-spacing, 0);
+  padding-bottom: 1rem;
+}
+
+.dp-scheduler--formWrapper {
+  padding-bottom: 1rem;
+}
+
+.dp-scheduler--schedulerFieldSet label {
+  margin: 0;
+}
+.dp-scheduler--schedulerFieldSet span span {
+  width: calc(6rem + 6rem);
+}
+
+.dp-scheduler--scheduleOption {
+  margin: 0 0 calc(0.25rem + 0.125rem) !important;
+}
+
+.dp-scheduler--scheduleSpecification {
+  font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
+  font-weight: var(--cds-productive-heading-01-font-weight, 600);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
+  letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
+  padding-bottom: 0.25rem;
+}
+
+.dp-scheduler--excludeDaysHelperText, .dp-scheduler--timezoneValue, .dp-scheduler--helperText {
+  font-size: var(--cds-helper-text-01-font-size, 0.75rem);
+  line-height: var(--cds-helper-text-01-line-height, 1.33333);
+  letter-spacing: var(--cds-helper-text-01-letter-spacing, 0.32px);
+}
+
+.dp-scheduler--timezoneValue {
+  margin-left: 0.25rem;
+}
+
+.dp-scheduler--excludeDaysHelperText {
+  color: var(--cds-text-helper);
+}
+
+.dp-scheduler--indentContainer {
+  height: 100%;
+  padding-left: 1.5rem;
+  width: 100%;
+}
+@media (width <= 550px) {
+  .dp-scheduler--indentContainer {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+.dp-scheduler--excludeDaysContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  height: 100%;
+  margin-top: calc(-0.75rem);
+  max-width: calc(1rem * 18);
+}
+
+.dp-scheduler--timezoneContainer {
+  padding-bottom: calc(1rem + 0.25rem);
+}
+
+.dp-scheduler--timeConfigContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+@media (width <= 550px) {
+  .dp-scheduler--timeConfigContainer {
+    padding-bottom: 1rem;
+  }
+  .dp-scheduler--timeConfigContainer :global(.cds--date-picker__input) {
+    inline-size: unset;
+  }
+}
+
+.dp-scheduler--sectionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+}
+@media (width <= 550px) {
+  .dp-scheduler--sectionContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    vertical-align: middle;
+  }
+}
+
+.dp-scheduler--sectionContainerNoFlex {
+  height: calc(2.5rem + 0.125rem);
+  padding-bottom: calc(1.5rem + 0.25rem);
+  width: 100%;
+}
+
+.dp-scheduler--datePickerInput {
+  width: 100%;
+}
+@media (width <= 320px) {
+  .dp-scheduler--datePickerInput {
+    width: calc(1rem * 18);
+  }
+  .dp-scheduler--datePickerInput .cds--date-picker__input {
+    inline-size: unset !important;
+  }
+}
+.dp-scheduler--datePickerInput .cds--date-picker__input {
+  width: 100% !important;
+}
+
+.dp-scheduler--24hr-label-disabled, .dp-scheduler--textLabel-disabled, .dp-scheduler--24hr-label, .dp-scheduler--textLabel {
+  font-size: var(--cds-heading-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-heading-compact-01-font-weight, 600);
+  line-height: var(--cds-heading-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-heading-compact-01-letter-spacing, 0.16px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0.25rem 0.25rem;
+  padding-top: 0.5rem;
+}
+
+.dp-scheduler--24hr-label {
+  white-space: nowrap;
+}
+
+.dp-scheduler--textLabel-disabled {
+  color: var(--cds-text-disabled);
+  cursor: not-allowed;
+}
+
+.dp-scheduler--24hr-label-disabled {
+  color: var(--cds-text-disabled);
+  cursor: not-allowed;
+  white-space: nowrap;
+}
+
+.dp-scheduler--inputWrapper {
+  margin: 0 0.25rem;
+}
+
+.dp-scheduler--timePickerWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+.dp-scheduler--invalidErrWrapper {
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.33333);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
+  color: var(--cds-support-error);
+  max-width: 85px !important;
+}
+
+.dp-scheduler--textInput {
+  width: calc(4rem + 1.5rem + 0.125rem);
+}
+
+.dp-scheduler--dropdownInput {
+  min-width: calc(6rem + 1rem);
+}
+.dp-scheduler--dropdownInput .cds--dropdown, .dp-scheduler--dropdownInput ul {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.dp-scheduler--configContainer {
+  background-color: var(--cds-layer-01);
+  border: solid var(--cds-text-placeholder);
+  border-radius: 0.125rem;
+  padding: 0.75rem 1rem;
+}
+
+.dp-scheduler--startOnContainer {
+  padding-bottom: calc(1rem * 2);
+}
+
+.dp-scheduler--endOnContainer {
+  padding: 0.75rem 0;
+}
+
+.dp-scheduler--dayButton {
+  height: 2rem;
+  width: calc(4rem + 0.75rem);
+}
+
+.dp-scheduler--excludeDaysInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  padding-top: 0.5rem;
+}
+.dp-scheduler--excludeDaysInfo .dp-scheduler--infoIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--cds-toggle-off);
+  margin-right: 0.5rem;
+}
+.dp-scheduler--excludeDaysInfo .dp-scheduler--infoText {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+  width: calc(10rem * 3 + 3rem);
+}
+
+.ax-edit-job-component--outer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.ax-edit-job-component--inner {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 93px);
+  width: 100%;
+}
+
+.ax-edit-job-component--influencer {
+  padding: 2rem 0 0 2rem;
+  width: 256px;
+  border-right: var(--cds-ui-03) 1px solid;
+  background-color: var(--cds-ui-01);
+}
+
+.ax-edit-job-component--container-light {
+  background-color: var(--cds-layer-02);
+}
+
+.ax-edit-job-component--main {
+  height: calc(100% - 4rem);
+  padding-bottom: 2rem;
+}
+
+.ax-edit-job-component--right {
+  padding: 2rem 0 0 0;
+  width: calc(100% - 256px);
+}
+
+.ax-edit-job-component--navigation {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+}
+.ax-edit-job-component--navigation > div:nth-of-type(1) {
+  text-align: left;
+}
+.ax-edit-job-component--navigation > div:nth-of-type(1) > button {
+  height: 4rem;
+  min-width: 100px;
+}
+.ax-edit-job-component--navigation > div:nth-of-type(2) {
+  text-align: right;
+}
+.ax-edit-job-component--navigation > div:nth-of-type(2) > button {
+  height: 4rem;
+  min-width: 228px;
+}
+
+.ax-edit-job-component--floatRightButton {
+  float: right;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ws--notebookSharing--pageGrid {
+  margin-left: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.ws--notebookSharing--verticalSpacing--sm {
+  padding-top: 0.25rem;
+}
+
+.ws--notebookSharing--verticalSpacing--md {
+  padding-top: 0.5rem;
+}
+
+.ws--notebookSharing--verticalSpacing--lg {
+  padding-top: 1.5rem;
+}
+
+.ws--notebookSharing--helperText {
+  font-size: var(--cds-helper-text-01-font-size, 0.75rem);
+  line-height: var(--cds-helper-text-01-line-height, 1.33333);
+  letter-spacing: var(--cds-helper-text-01-letter-spacing, 0.32px);
+}
+.ws--notebookSharing--helperText > svg {
+  vertical-align: bottom;
+}
+
+.ws--notebookSharing--socialIcons {
+  padding-block-start: 0 !important;
+}
+
+.ws--notebookSharing--socialIcons:hover {
+  cursor: pointer;
+}
+
+.ws--notebookSharing--verticalAlignment {
+  align-items: flex-end;
+}
+
+.ws--notebookSharing--errorNotification {
+  padding-bottom: 0;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ws--item-selection-modal--select {
+  width: 100%;
+  min-width: 100%;
+}
+.ws--item-selection-modal--select > div,
+.ws--item-selection-modal--select select {
+  width: 100%;
+  min-width: 100%;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ws--gistPublishing--verticalSpacing--md {
+  padding-top: 0.5rem;
+}
+
+.ws--gistPublishing--verticalSpacing--lg {
+  padding-top: 1.5rem;
+}
+
+.ws--gistPublishing--skeletonPlaceHolder {
+  width: "100%";
+}
+
+.ws--gistPublishing--formGroup {
+  margin-bottom: 0;
+}
+
+.ws--gistPublishing--notificationStyle {
+  padding-bottom: 0;
+}
+
+.ws--gistPublishing--fieldSet > legend {
+  margin-bottom: 0.5rem;
+}
+
+.ws--gistPublishing--hidden {
+  clip: rect(0px, 0px, 0px, 0px);
+  border: 0px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  visibility: inherit;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ws--githubPublishing--verticalSpacing--md {
+  padding-top: 0.5rem;
+}
+
+.ws--githubPublishing--skeletonPlaceHolder {
+  width: "100%";
+}
+
+.ws--githubPublishing--notificationStyle {
+  padding-bottom: 0;
+}
+
+.ws--githubPublishing--fieldSet > legend {
+  margin-bottom: 0.5rem;
+}
+
+.ws--githubPublishing--hidden {
+  clip: rect(0px, 0px, 0px, 0px);
+  border: 0px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  visibility: inherit;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*******************************************************************************
+* IBM Confidential
+* OCO Source Materials
+* 5737-C49, 5737-B37
+* (C) Copyright IBM Corp. 2020, 2024
+*
+* The source code for this program is not published or otherwise divested of
+* its trade secrets, irrespective of what has been deposited with the
+* U.S. Copyright Office.
+*******************************************************************************/
+.ws--assetPreviewer--previewContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.ws--assetPreviewer--iframe {
+  height: 100%;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.ws--assetPreviewer--hidden {
+  display: none;
+}
